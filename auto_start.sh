@@ -12,7 +12,7 @@ echo "* (SCRIPT) Docker network create."
 docker network create --driver bridge --subnet=100.0.0.0/24 triton
 
 echo "* (SCRIPT) Docker start."
-docker run -d --name tritonserver --rm --gpus all --shm-size 16384m --network triton --ip 100.0.0.2 -p 8000:8000 -p 8022:22 -v $PWD/models:/models tritonserver
+docker run -d --name tritonserver --rm --gpus all --shm-size 16384m --network triton --ip 100.0.0.2 -p 8000:8000 -p 8022:22 -v $PWD/models:/opt/tritonserver/models tritonserver
 if [ $? -ne 0 ]; then
 	docker stop tritonserver
 	docker run -d --name tritonserver --rm --gpus all --shm-size 16384m --network triton --ip 100.0.0.2 -p 8000:8000 -p 8022:22 -v $PWD/models:/models tritonserver

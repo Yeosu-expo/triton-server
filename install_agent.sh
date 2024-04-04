@@ -3,7 +3,7 @@ bash auto_start.sh
 echo "* (SCRIPT) Triton agent start."
 echo "* (SCRIPT) Triton agent download."
 rm -rf triton-agent
-git clone https://github.com/ahr-i/triton-agent.git
+git clone https://github.com/Yeosu-expo/triton-agent.git
 echo "* (SCRIPT) Download success!"
 
 echo "* (SCRIPT) Triton agent setting."
