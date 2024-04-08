@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/tritonserver:23.12-py3
+FROM nvcr.io/nvidia/tritonserver:23.11-py3
 
 # Install required packages.
 RUN pip install torch==1.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
